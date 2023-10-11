@@ -1,0 +1,169 @@
+/* =============
+ table of contents
+===============
+ 
+
+
+1- Header 
+
+2- anmie our-team
+
+3- about-title
+
+4- footer 
+
+
+/* --------------------------------------->>>>>>>>>> */
+
+/* =========
+1- Header
+=========== */
+
+header figure {
+    animation: main-lego 1671ms 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes main-lego {
+    0% {
+        transform: translateX(282%);
+    }
+
+    63% {
+        transform: translateX(-103%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+header ul {
+    animation: ul-hover .33s 1;
+}
+
+@keyframes ul-hover {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* end Header */
+
+/* =================
+2- anmie our-team
+================ */
+
+
+.down-team figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.down-team figure:hover::before {
+    -webkit-animation: anmiee 0.75s;
+    animation: anmiee 0.75s;
+
+}
+
+@-webkit-keyframes anmiee {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes anmiee {
+    100% {
+        left: 125%;
+    }
+}
+
+/* 3-END anmie our-team  */
+
+/* =================
+3- about title 
+================ */
+
+.top-about h2+p {
+    margin: 17.5px auto;
+    border-right: 2px solid var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: control-width 3s steps(40) 2.25s both, blink .5s 16, hide 1000s 1 linear 8.1s;
+}
+
+@keyframes control-width {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 320px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: var(--main-color);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes hide {
+    from {
+        border-right: 2px solid transparent;
+    }
+
+    to {
+        border-right: 2px solid transparent;
+    }
+}
+
+/* 3-END servers title  */
+
+
+/* 4-footer */
+
+.fa-heart {
+    color: #0ea899;
+}
+
+.fa-heart {
+    animation-name: heart;
+    animation-duration: 1618ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
